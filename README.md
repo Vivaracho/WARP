@@ -2,13 +2,15 @@
 
 **Cloudflare WARP launcher - notifier working with zenity, tested in Ubuntu 24.04.**
 
+![MENU](https://github.com/Vivaracho/WARP_Launcher-zenity/blob/169d349546bd0d5fb2b8032108da60262abe0aeb/warp-menu.png)
+
+![NOTIFICATION](https://github.com/Vivaracho/WARP_Launcher-zenity/blob/169d349546bd0d5fb2b8032108da60262abe0aeb/warp-noti.png)
 
 
 ***INSTALL:***
 
 
-Install [Cloudflare client](https://one.one.one.one/
-) (skip if already installed).
+Install [Cloudflare client](https://one.one.one.one/) (skip if already installed).
 
 
 Download the file [cloudflare.Warp.zenity.desktop](https://github.com/Vivaracho/WARP_Launcher-zenity/raw/main/cloudflare.Warp.zenity.desktop).
@@ -50,3 +52,4 @@ If you want to remove the shorcut for a user
 ```
 rm $HOME/.local/share/applications/cloudflare.Warp.zenity.desktop
 ```
+
