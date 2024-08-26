@@ -1,0 +1,32 @@
+[Desktop Entry]
+Type=Application
+Version=1.2
+Name=Cloudflare WARP
+Comment=Check the current status of WARP.
+Terminal=false
+#Exec=systemctl --user start warp-taskbar
+Exec=sh -c "warp-cli -v connect 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=3;\\$SHELL"
+Keywords=warp teams cloudflare vpn
+Icon=zero-trust-orange
+Actions=status;disconnect;connect;test;daemon
+
+
+[Desktop Action status]
+Name=Status
+Exec=sh -c "warp-cli -v status 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=3;\\$SHELL"
+
+[Desktop Action disconnect]
+Name=Disconnect
+Exec=sh -c "warp-cli -v disconnect 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=3;\\$SHELL"
+
+[Desktop Action connect]
+Name=Connect
+Exec=sh -c "warp-cli -v connect 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=3;\\$SHELL"
+
+[Desktop Action test]
+Name=Test
+Exec=sh -c "curl https://www.cloudflare.com/cdn-cgi/trace/ 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=10;\\$SHELL"
+
+[Desktop Action daemon]
+Name=Daemon
+Exec=sh -c "systemctl --user enable --now warp-svc 2>&1 | zenity --text-info --auto-scroll --title 'WARP Info' --ok-label='OK' --cancel-label='ESC' --timeout=10;\\$SHELL"
