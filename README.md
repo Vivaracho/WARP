@@ -11,7 +11,7 @@ Install [Cloudflare client](https://one.one.one.one/
 ) (skip if already installed).
 
 
-Download the file [cloudflare.Warp.zenity.desktop]().
+Download the file [cloudflare.Warp.zenity.desktop](https://github.com/Vivaracho/WARP_Launcher-zenity/raw/main/cloudflare.Warp.zenity.desktop).
 
 
 To install shortcut for all users
